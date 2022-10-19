@@ -1,80 +1,81 @@
 # DEMO HINH CHU NHAT
 ## KHAI BAO
-#include <iostream>
+- Khai bao thuoc tinh (private), phuong thuc (public) <br />
+#include <iostream> <br />
 
-using namespace std;
+using namespace std; <br />
 
-class ChuNhat
-{
+class ChuNhat 
+{<br />
 private:
-    double chieudai, chieurong;
+    double chieudai, chieurong;<br />
 
-public:
+public:<br />
     void nhap();
     void xuat();
     double chuvi();
     void sosanh(ChuNhat a);
-    bool kiemtra();
-};
+    bool kiemtra();<br />
+};<br />
 ## HAM NHAP
 void ChuNhat::nhap()
-{
+{<br />
     cout << "Nhap chieu dai: ";
-    cin >> chieudai;
+    cin >> chieudai;<br />
     cout << "Nhap chieu rong: ";
     cin >> chieurong;
-}
+}<br />
 ## HAM XUAT
 void ChuNhat::xuat()
-{
+{<br />
     cout << "co kich thuoc " << chieudai << " x " << chieurong << endl;
-}
+}<br />
 ## HAM TINH CHU VI
 double ChuNhat::chuvi()
-{
-    double P = (chieudai + chieurong)*2;
+{<br />
+    double P = (chieudai + chieurong)*2;<br />
     return P;
-}
+}<br />
 ## HAM SO SANH
 void ChuNhat::sosanh(ChuNhat a)
-{
+{<br />
     if (chuvi() > a.chuvi())
-        cout << "Chu vi hinh chu nhat thu nhat lon hon hinh chu nhat thu hai" << endl;
+        cout << "Chu vi hinh chu nhat thu nhat lon hon hinh chu nhat thu hai" << endl;<br />
     else if (chuvi() == a.chuvi())
-        cout << "Chu vi hinh chu nhat thu nhat bang hinh chu nhat thu hai" << endl;
+        cout << "Chu vi hinh chu nhat thu nhat bang hinh chu nhat thu hai" << endl;<br />
     else
         cout << "Chu vi hinh chu nhat thu nhat nho hon hinh chu nhat thu hai" << endl;
-}
+}<br />
 ## HAM KIEM TRA
 bool ChuNhat::kiemtra()
-{
+{<br />
     if (chieudai == chieurong)
-        return true;
+        return true;<br />
     else
         return false;
-}
+}<br />
 
 ## HAM MAIN
 int main()
-{
-    ChuNhat a, b;
+{<br />
+    ChuNhat a, b;<br />
     cout << "Nhap hinh chu nhat thu nhat: " << endl;
-    a.nhap();
+    a.nhap();<br />
     cout << "Nhap hinh chu nhat thu hai: " << endl;
-    b.nhap();
+    b.nhap();<br />
 
     cout << "\nHinh chu nhat thu nhat ";
-    a.xuat();
+    a.xuat();<br />
     cout << "Hinh chu nhat thu hai ";
-    b.xuat();
+    b.xuat();<br />
 
-    cout << "\nChu vi hinh chu nhat thu nhat la " << a.chuvi() << endl;
-    cout << "Chu vi hinh chu nhat thu hai la " << b.chuvi() << endl << endl;
+    cout << "\nChu vi hinh chu nhat thu nhat la " << a.chuvi() << endl;<br />
+    cout << "Chu vi hinh chu nhat thu hai la " << b.chuvi() << endl << endl;<br />
 
-    a.sosanh(b);
+    a.sosanh(b);<br />
 
-    cout << "\nHinh chu nhat la hinh vuong: " << a.kiemtra() << endl;
-    cout << "Hinh chu nhat la hinh vuong: " << b.kiemtra() << endl;
+    cout << "\nHinh chu nhat la hinh vuong: " << a.kiemtra() << endl;<br />
+    cout << "Hinh chu nhat la hinh vuong: " << b.kiemtra() << endl;<br />
 
     return 0;
 }
