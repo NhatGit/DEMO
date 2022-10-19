@@ -1,5 +1,5 @@
-# DEMO
-test
+# DEMO HINH CHU NHAT
+## KHAI BAO
 #include <iostream>
 
 using namespace std;
@@ -16,7 +16,7 @@ public:
     void sosanh(ChuNhat a);
     bool kiemtra();
 };
-
+## HAM NHAP
 void ChuNhat::nhap()
 {
     cout << "Nhap chieu dai: ";
@@ -24,18 +24,18 @@ void ChuNhat::nhap()
     cout << "Nhap chieu rong: ";
     cin >> chieurong;
 }
-
+## HAM XUAT
 void ChuNhat::xuat()
 {
     cout << "co kich thuoc " << chieudai << " x " << chieurong << endl;
 }
-
+## HAM TINH CHU VI
 double ChuNhat::chuvi()
 {
     double P = (chieudai + chieurong)*2;
     return P;
 }
-
+## HAM SO SANH
 void ChuNhat::sosanh(ChuNhat a)
 {
     if (chuvi() > a.chuvi())
@@ -45,7 +45,7 @@ void ChuNhat::sosanh(ChuNhat a)
     else
         cout << "Chu vi hinh chu nhat thu nhat nho hon hinh chu nhat thu hai" << endl;
 }
-
+## HAM KIEM TRA
 bool ChuNhat::kiemtra()
 {
     if (chieudai == chieurong)
@@ -54,6 +54,7 @@ bool ChuNhat::kiemtra()
         return false;
 }
 
+## HAM MAIN
 int main()
 {
     ChuNhat a, b;
